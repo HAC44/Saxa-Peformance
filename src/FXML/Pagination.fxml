@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PaginationControler">
+   <children>
+      <ImageView fx:id="catImg" fitHeight="100.0" fitWidth="100.0" layoutX="280.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/Admission.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nameLabel" alignment="CENTER" layoutX="15.0" layoutY="10.0" maxHeight="120.0" maxWidth="250.0" prefHeight="120.0" prefWidth="250.0" text="Frein Ceramique en carbone De course hyper prtaique pour conditions" textFill="#88a694" wrapText="true">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptionLabel" alignment="CENTER" layoutX="20.0" layoutY="160.0" prefHeight="100.0" prefWidth="360.0" text="Des freins concus pour la course et l'endurance et sert au conditions extreme et tout " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="categoryLabel" alignment="CENTER" layoutX="20.0" layoutY="260.0" prefHeight="50.0" prefWidth="360.0" text="Admissions" textFill="#88a694">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" alignment="CENTER" layoutX="20.0" layoutY="310.0" prefHeight="50.0" prefWidth="360.0" text="125 000 DH" textFill="#88a694">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" alignment="TOP_RIGHT" layoutX="20.0" layoutY="360.0" prefHeight="40.0" prefWidth="360.0" text="ID : 8" textFill="#12a694">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

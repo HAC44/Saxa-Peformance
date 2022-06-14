@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DevisControler">
+   <children>
+      <Pane layoutX="220.0" prefHeight="900.0" prefWidth="1130.0">
+         <children>
+            <Label layoutX="40.0" layoutY="40.0" prefHeight="40.0" prefWidth="240.0" text="Générer le devis" textFill="#88a694">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Pane layoutX="600.0" prefHeight="915.0" prefWidth="4.0" style="-fx-background-color: #88a694;" />
+            <TableView fx:id="cartTable" layoutX="604.0" prefHeight="700.0" prefWidth="540.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="49.0" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="268.0" style="-fx-alignment: center;" text="Nom de la pieces" />
+                  <TableColumn fx:id="nbColumn" prefWidth="97.0" style="-fx-alignment: center;" text="Nb" />
+                  <TableColumn fx:id="priceColumn" prefWidth="124.0" style="-fx-alignment: center;" text="Prix" />
+              </columns>
+            </TableView>
+            <JFXTextField fx:id="idField" focusColor="#88a694" layoutX="40.0" layoutY="120.0" prefHeight="40.0" prefWidth="350.0" promptText="Saisissez l'id de la pieces">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <Pane fx:id="piecesPane" layoutX="40.0" layoutY="280.0" prefHeight="480.0" prefWidth="520.0" />
+            <JFXButton fx:id="confirmButton" layoutX="40.0" layoutY="191.0" onAction="#search" prefHeight="50.0" prefWidth="200.0" styleClass="add-button" text="Confimer la pieces" />
+            <VBox layoutX="650.0" layoutY="720.0" prefHeight="98.0" prefWidth="450.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="200.0" text="Total TTC :" textFill="#88a694">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="totalPrice" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="308.0" text="308000 DH" textFill="#88a694">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="printButton" layoutX="60.0" layoutY="820.0" mnemonicParsing="false" onAction="#print" prefHeight="60.0" prefWidth="200.0" styleClass="add-button" text="Print">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="PRINTER" size="30" />
+               </graphic>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearButton" layoutX="330.0" layoutY="820.0" mnemonicParsing="false" onAction="#clearData" prefHeight="60.0" prefWidth="230.0" styleClass="add-button" text="Vider le panier">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CART_OUTLINE" size="30" />
+               </graphic>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <HBox layoutX="649.0" layoutY="820.0" prefHeight="60.0" prefWidth="450.0">
+               <children>
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteData" prefHeight="60.0" prefWidth="200.0" styleClass="add-button" text="Supprimer">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="DELETE" size="30" text="" />
+                     </graphic>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshPage" prefHeight="60.0" prefWidth="200.0" styleClass="add-button" text="Rafraichir">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="REFRESH" size="30" />
+                     </graphic>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane prefHeight="915.0" prefWidth="220.0" style="-fx-background-color: #88a694;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="190.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/iconeAplli%20white.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="175.0" prefWidth="216.0" text="Saxa&#10;Performance&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="27.0" />
+               </font>
+            </Label>
+            <VBox layoutX="35.0" layoutY="350.0" prefHeight="274.0" prefWidth="150.0">
+               <children>
+                  <JFXButton fx:id="homeButton" alignment="CENTER" onAction="#changeToHome" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text="Home">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="piecesButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" onAction="#changeToPieces" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text=" Pièces">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="GEAR" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="devisButton" alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text="Devis">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="INSTITUTION" size="35" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

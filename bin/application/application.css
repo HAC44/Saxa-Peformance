@@ -1,0 +1,213 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+	main: #88a694;
+}
+.text-field {
+	-fx-text-inner-color: #88a694;
+}
+.dialog-pane {
+    -fx-background-color: #f1f1f1;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #12a694;
+    -fx-font-weight: bolder;
+    -fx-font-size: 18px;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: black;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-font-style: italic;
+    -fx-font-size: 18px;
+}
+.dialog-pane .button{
+   -fx-background-color: #88a694;
+   -fx-text-fill:white;
+   -fx-wrap-text: true;
+   	-fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 0);
+   -fx-cursor:hand;
+ }
+.dialog-pane .button:hover{     
+  -fx-background-color: #12a694;
+  -fx-text-fill: white;
+  -fx-font-weight:bold; 
+ }
+.home-page {
+	-fx-font-weight: bolder;
+	-fx-text-fill: #fff;
+	-fx-background-color: #88a694;
+	-fx-font-size: 25px;
+	-fx-border-color: #fff;
+	-fx-border-width: 0 0 2px 0;
+}
+.home-page:hover .glyph-icon, .home-page:hover {
+	-fx-cursor: pointer;
+	-fx-background-color: #fff;
+	-fx-text-fill: #88a694;
+	-fx-fill: #88a694;
+	-fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 0);
+}
+.main-page {
+	-fx-text-fill: #fff;
+	-fx-background-color: #88a694;
+	-fx-font-size: 18px;
+}
+.lbl-info {
+	-fx-font-weight: bolder;
+	-fx-text-fill: #fff;
+	-fx-background-color: #88a694;
+	-fx-font-size: 25px;
+	-fx-border-color: #12a694;
+	-fx-border-width: 0 3px 3px 0;
+}
+.add-button {
+	-fx-font-weight: bolder;
+	-fx-text-fill: #fff;
+	-fx-background-color: #88a694;
+}
+.add-button:hover .glyph-icon, .add-button:hover{
+	-fx-cursor: pointer;
+	-fx-background-color: #fff;
+	-fx-text-fill: #88a694;
+	-fx-fill: #88a694;
+	-fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 0);
+}
+.pop-button {
+	-fx-font-weight: bolder;
+	-fx-text-fill: #88a694;
+	-fx-font-size: 16px;
+}
+.pop-button:hover {
+	-fx-cursor: pointer;
+	-fx-background-color: #88a694;
+	-fx-text-fill: #fff;
+	-fx-fill: #fff;
+}
+.chart-title {
+	-fx-background-color: #88a694;
+
+	-fx-text-fill: #fff;
+	-fx-font-weight: bolder;
+}
+.chart-pie-label {
+	-fx-fill: #12a694;
+}
+.chart-pie-label-line {
+	-fx-fill: #12a694;
+}
+.spinner {
+    -fx-prompt-text-fill: black;
+    -fx-text-fill: black;
+    -fx-background-color: none;
+
+    -fx-padding: 0 0 3 0;   
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+}
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #88a694;
+    -fx-font-size: 25px;
+}
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #88a694;
+}
+.spinner .increment-arrow-button:hover .increment-arrow,
+.spinner .decrement-arrow-button:hover .decrement-arrow {
+    -fx-background-color: #fff;
+    -fx-font-size: 25px;
+}
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #bdbdbd;
+} 
+.pieces-pane {
+	-fx-border-color: #88a694;
+	-fx-border-width: 2px 2px 0 0; 	
+}
+.pagination .pagination-control .button, .pagination .toggle-button {
+    -fx-background-color: #88a694;
+    -fx-text-fill: #fff;
+    -fx-font-size: 12px;
+}
+
+.pagination .pagination-control .toggle-button:selected {   
+    -fx-background-color: #fff;
+    -fx-text-fill: #88a694;
+    -fx-font-size: 15px;
+}
+.pagination .pagination-control .toggle-button:hover, .pagination .pagination-control .button:hover  {   
+    -fx-background-color: #fff;
+    -fx-text-fill: #88a694;
+    -fx-fill: #88a694;
+    -fx-background-insets: 0;
+}
+.pagination .pagination-control .left-arrow, .right-arrow{
+    -fx-background-color: #fff;
+    -fx-text-fill: #88a694;
+}
+.pagination .label {
+  -fx-text-fill: #88a694;
+  -fx-font-size: 15px;
+}
+.table-view {
+    -fx-background-color:#88a694;
+    -fx-background-radius:14 14 0 0;
+    -fx-font-size: 18;   
+}
+.table-view .column-header-background{
+	-fx-background-color: #88a694;
+    -fx-background-radius:14;
+    -fx-background-insets: 0 0 10 0;
+}
+.table-view .column-header, .table-view .filler{
+	-fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;
+}
+.table-view .column-header .label {
+	-fx-text-fill: white ;
+}
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 10px 0 2px 10px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #88a694;
+    -fx-text-background-color: #fff;
+}
+.table-row-cell:selected {
+	-fx-background-color: #12a694;
+}
+table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: #fff;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, #12a694);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #12a694);
+}
+.table-view .virtual-flow .scroll-bar .increment-button:hover,
+.table-view .virtual-flow .scroll-bar .decrement-button:hover {
+	-fx-background-color: #12a694;
+	-fx-text-fill: #88a694;
+}
+.pag-style {
+	-fx-text-fill: #111;
+}
+.tree-table-row-cell:first-row .tree-table-cell {
+	-fx-text-fill: #88a964 ;
+}

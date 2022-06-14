@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/DEFALT/Desktop/Java/javafx-sdk-17.0.2/jfoenix-8.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DEFALT/Desktop/Java/javafx-sdk-17.0.2/mysql-connector-java-5.1.6-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DEFALT/Desktop/Java/javafx-sdk-17.0.2/fontawesomefx-8.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DEFALT/Desktop/Java/javafx-sdk-17.0.2/itextpdf-5.4.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

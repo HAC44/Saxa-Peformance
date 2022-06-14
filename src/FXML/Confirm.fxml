@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfirmControler">
+   <children>
+      <Label layoutX="25.0" layoutY="25.0" prefHeight="38.0" prefWidth="498.0" text="Voulez vous confirmer la commande" textFill="#88a694">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <HBox layoutX="25.0" layoutY="125.0" prefHeight="50.0" prefWidth="550.0">
+         <children>
+            <JFXButton fx:id="confirmButton" onAction="#print" prefHeight="50.0" prefWidth="150.0" styleClass="add-button" text="Confirmer">
+               <HBox.margin>
+                  <Insets left="90.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="cancelButton" onAction="#cancel" prefHeight="50.0" prefWidth="150.0" styleClass="add-button" text="Annuler">
+               <HBox.margin>
+                  <Insets left="90.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label fx:id="nameLabel" alignment="CENTER" layoutX="25.0" layoutY="63.0" prefHeight="50.0" prefWidth="550.0" text="HAMZA ALAMI" textFill="#12a694">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PiecesPageAdminControler">
+   <children>
+      <Pane layoutX="220.0" prefHeight="900.0" prefWidth="1130.0">
+         <children>
+            <Label layoutX="40.0" layoutY="40.0" text="Filtrer par categorie" textFill="#88a694">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="categoryCombo" focusColor="#88a694" layoutX="40.0" layoutY="120.0" prefHeight="40.0" prefWidth="300.0" promptText="Selectionner la categorie" />
+            <JFXButton fx:id="confirmCategory" layoutX="40.0" layoutY="180.0" onAction="#refresh" prefHeight="56.0" prefWidth="240.0" styleClass="main-page" text="Confirmer la categorie">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+               </graphic>
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutY="250.0" prefHeight="4.0" prefWidth="1130.0" style="-fx-background-color: #88a694;" />
+            <JFXButton fx:id="refresh" layoutX="965.0" layoutY="180.0" onAction="#refresh" prefHeight="56.0" prefWidth="150.0" styleClass="main-page" text="Rafraichir">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="30" />
+               </graphic>
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="seeButton" layoutX="785.0" layoutY="180.0" onAction="#see" prefHeight="56.0" prefWidth="170.0" styleClass="main-page" text="Monter Tout">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EYE" size="20" />
+               </graphic>
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="piecesTable" layoutX="15.0" layoutY="264.0" prefHeight="620.0" prefWidth="1100.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="60.0" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="400.0" style="-fx-alignment: center;" text="Nom" />
+                  <TableColumn fx:id="priceColumn" prefWidth="120.0" style="-fx-alignment: center;" text="Prix" />
+                  <TableColumn fx:id="stockColumn" prefWidth="100.0" style="-fx-alignment: center;" text="Stock" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="300.0" style="-fx-alignment: center;" text="Category" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="800.0" style="-fx-alignment: center;" text="Description" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="modifyButton" layoutX="605.0" layoutY="180.0" onAction="#edit" prefHeight="56.0" prefWidth="170.0" styleClass="main-page" text="Modifier">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CLOUD_UPLOAD" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deleteButton" layoutX="425.0" layoutY="180.0" onAction="#delete" prefHeight="56.0" prefWidth="170.0" styleClass="main-page" text="Supprimer">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="DELETE" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="addButton" layoutX="784.0" layoutY="112.0" onAction="#addButton" prefHeight="56.0" prefWidth="331.0" styleClass="main-page" text="Ajouter une piece">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CART_PLUS" size="20" />
+               </graphic>
+            </JFXButton>
+            <ImageView fx:id="catImg" fitHeight="99.0" fitWidth="123.0" layoutX="449.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="220.0" style="-fx-background-color: #88a694;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="190.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/iconeAplli%20white.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="175.0" prefWidth="216.0" text="Saxa&#10;Performance&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="27.0" />
+               </font>
+            </Label>
+            <VBox layoutX="8.0" layoutY="350.0" prefHeight="300.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="homeButton" alignment="CENTER" onAction="#goToMainPage" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text="Home">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="piecesButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text=" Pièces">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="GEAR" size="35" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="clientsButton" alignment="CENTER" layoutX="10.0" layoutY="110.0" onAction="#goToClient" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text="Clients">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="35" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="history" alignment="CENTER" layoutX="10.0" layoutY="210.0" onAction="#goToHistory" prefHeight="70.0" prefWidth="216.0" styleClass="home-page" text="Historique">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CART_ARROW_DOWN" size="35" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

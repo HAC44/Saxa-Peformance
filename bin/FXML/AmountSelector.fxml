@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AmountSelectorControler">
+   <children>
+      <Label layoutX="20.0" layoutY="30.0" prefHeight="38.0" prefWidth="498.0" text="Selectionner le nombre que vous voulez  :" textFill="#88a694">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <HBox layoutX="25.0" layoutY="100.0" prefHeight="50.0" prefWidth="550.0">
+         <children>
+            <Spinner fx:id="amount" prefHeight="50.0" prefWidth="150.0" />
+            <JFXButton fx:id="confirmButton" onAction="#addToCart" prefHeight="50.0" prefWidth="150.0" styleClass="add-button" text="Confirmer">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="cancelButton" onAction="#cancel" prefHeight="50.0" prefWidth="150.0" styleClass="add-button" text="Annuler">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

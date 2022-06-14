@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddPiecesControler">
+   <children>
+      <JFXComboBox fx:id="categoryCombo" focusColor="#88a694" layoutX="50.0" layoutY="148.0" prefHeight="45.0" prefWidth="400.0" promptText="Selectionner une categorie" />
+      <Label alignment="CENTER" layoutX="50.0" layoutY="65.0" prefWidth="400.0" text="Ajouter une pieces" textFill="#88a694">
+         <font>
+            <Font name="Arial Bold Italic" size="41.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="179.0" fitWidth="185.0" layoutX="567.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/iconeAplli%20(1).png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="nameField" focusColor="#88a694" layoutX="70.0" layoutY="218.0" prefHeight="45.0" prefWidth="400.0" promptText="Nom de la pièce">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="descriptionField" focusColor="#88a694" layoutX="70.0" layoutY="321.0" prefHeight="115.0" prefWidth="400.0" promptText="Description" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXTextArea>
+      <Spinner fx:id="nbSpinner" editable="true" layoutX="270.0" layoutY="455.0" prefHeight="45.0" prefWidth="200.0" />
+      <Label layoutX="70.0" layoutY="455.0" prefHeight="45.0" prefWidth="200.0" text="Nombre de pieces :" textFill="#4d4d4d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="525.0" prefHeight="45.0" prefWidth="121.0" text="Prix :" textFill="#4d4d4d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="priceSpinner" layoutX="190.0" layoutY="525.0" prefHeight="45.0" prefWidth="280.0" />
+      <HBox layoutX="150.0" layoutY="600.0" prefHeight="70.0" prefWidth="500.0">
+         <children>
+            <JFXButton fx:id="confirmButton" onAction="#addPieces" prefHeight="70.0" prefWidth="200.0" styleClass="add-button" text="Confirmer">
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="70.0" prefWidth="200.0" styleClass="add-button" text="Annuler" />
+         </children>
+      </HBox>
+      <ImageView fx:id="catImg" fitHeight="150.0" fitWidth="200.0" layoutX="550.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
